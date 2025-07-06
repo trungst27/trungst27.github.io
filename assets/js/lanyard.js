@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const userId = '880694639227699290'; //replace your discord id here
+  const userId = '888808235878981712'; //replace your discord id here
   const apiUrl = `https://api.lanyard.rest/v1/users/${userId}`;
   
   const avatar = document.getElementById('discord-avatar');
@@ -22,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const discord = data.data;
         
         const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${discord.discord_user.avatar}.png`;
-        avatar.src = avatarUrl;
+        avatar.src = "./assets/pfp/ggs st.png"; // Yeu st
+
         
-        username.textContent = discord.discord_user.username;
+        username.textContent = "VietTrung";  // <<== Yeu sam thai ạ nếu cậu biết code của tớ
         
         const status = discord.discord_status || 'offline';
         statusDot.className = `status-${status}`;
