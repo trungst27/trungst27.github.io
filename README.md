@@ -47,4 +47,14 @@ This project is licensed under the [MIT License](LICENSE). Feel free to customiz
 
 ![image](https://i.postimg.cc/524RpJKb/1.png)
 
-![image](https://i.postimg.cc/3wWb5BHq/2.png)
+![image](https://i.ibb.co/S7rBVbtb/preview.png)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to customize and use it according to your needs. Contributions are welcome!
+
+## Credits
+
+Special thanks to [c0mplex](https://www.facebook.com/enou456/) for the original idea and template.
+
+---
