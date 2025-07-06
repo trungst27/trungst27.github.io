@@ -72,7 +72,7 @@
 
       <div class="user-description">
         <p id="user-description" style="color: white;">
-          Eco — year 1 years Student<br>KTPT 2<br>VNUers, 1/3.5 years of experience<br>Yeu ST KT4 definitely
+          Eco — year 1 Student<br>KTPT 2<br>VNUers, 1/3.5 years of experience<br>Yeu ST KT4 definitely
         </p>
       </div>
 
@@ -103,7 +103,7 @@
       </div>
 
       <div class="links">
-        <a href="https://dsc.gg/c0mplex-devzone" target="_blank">
+        <a href="https://discord.gg/HJCcg4txdk" target="_blank">
           <i class="fab fa-discord"></i>
         </a> 
         <a href="https://www.facebook.com/trungsth1827" target="_blank">
@@ -135,5 +135,15 @@
   <script src="./assets/js/neko.js"></script>
   <script src="./assets/js/neko-init.js"></script>
   <script src="./assets/js/music.js"></script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function startMusicOnUserInteraction() {
+        window.MusicPlayer.start();
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === "Enter") startMusicOnUserInteraction();
+      });
+      document.addEventListener('click', startMusicOnUserInteraction, { once: true });
+    });
+  </script>
 </body>
-</html>

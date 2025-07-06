@@ -1,5 +1,5 @@
 const songs = [
-    "What Lovers Do - Maroon 5  Elemer Remix (Lyrics + Vietsub) ♫.mp3"
+    "Khó Vẽ Nụ Cười - VAVH.mp3"
 ];
 
 let currentSongIndex = 0;
