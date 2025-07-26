@@ -3,11 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const cursorElement = document.getElementById('typing-cursor');
   
   const usernameVariants = [
-    "Viet Trung", 
-    "UEBers love ST",
-    "Still loving ST",
-    "To Yeu Cau ♥︎"
-  ];
+  "𝚅𝚒𝚎𝚝 𝚃𝚛𝚞𝚗𝚐",
+  "𝕌𝔼𝔹✦𝔻𝔼𝕊𝕋𝕀ℕ𝕐",
+  "𝑆𝑇 — ???",
+  "l o v e . . .",
+  "泰",
+  "𝑭𝒐𝒓 : 泰",
+  "??? 泰 ???",
+  "S [泰]",
+  "🖤 泰 🖤",
+  "C o d e : 泰",
+  "泰 — ...?",
+  "𝑳𝒐𝒔𝒕 𝒊𝒏 泰",
+  "𝙁𝙊𝙍 ( 泰 )",
+  "𝑳𝒊𝒆𝒖 𝒄𝒐́ 𝒑𝒉𝒂𝒊 泰?",
+  "N. A. M. E : 泰",
+  "… 泰 …",
+  "T . . . a . . . i",
+  "𝚃𝚑𝚎 𝚗𝚊𝚖𝚎 𝚒𝚜 泰"
+];
+
   
   let currentText = '';
   let isDeleting = false;
