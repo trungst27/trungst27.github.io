@@ -162,6 +162,10 @@ body {
   margin-bottom: 10px;
 }
 
+#profile-picture {
+  object-fit: cover;
+}
+
 .links {
   position: absolute;
   bottom: 20px;
@@ -217,16 +221,20 @@ body {
   word-break: break-word;
 }
 
-#avatar-frame {
+.discord-icon #avatar-frame {
   position: absolute;
-  top: 11%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
-  width: 25vmin;
-  height: 25vmin;
-  max-width: 160px;
-  max-height: 160px;
-  z-index: 1001;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  background: none;
+  box-shadow: none;
+  z-index: 1;
   pointer-events: none;
   display: none;
   border-radius: 0 !important;
@@ -297,7 +305,7 @@ body {
   margin-right: 14px;
 }
 
-.discord-icon img {
+.discord-icon #discord-avatar {
   width: 15vmin;
   height: 15vmin;
   max-width: 72px;
@@ -335,6 +343,7 @@ body {
 
 #discord-status-dot {
   position: absolute;
+  z-index: 2;
   right: -2px;
   bottom: -2px;
   width: 11px;
@@ -417,7 +426,7 @@ body {
   margin-bottom: 2px;
 }
 
-.discord-widget .discord-icon img {
+.discord-icon #discord-avatar {
   width: 52px !important;
   height: 52px !important;
   display: block;
@@ -527,14 +536,6 @@ body.video-normal #video-overlay {
     font-size: 24px !important;
   }
 
-  #avatar-frame {
-    top: 11%;
-    width: 22vmin;
-    height: 22vmin;
-    max-width: 100px;
-    max-height: 100px;
-  }
-
   .discord-widget {
     top: 39%;
     width: 50%;
@@ -592,15 +593,6 @@ body.video-normal #video-overlay {
     font-size: 24px !important;
   }
 
-  #avatar-frame {
-    top: 10.1%;
-    width: 25vmin;
-    height: 25vmin;
-    max-width: 100px;
-    max-height: 100px;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   .discord-widget {
     width: 90%;
     max-width: 300px;
@@ -630,7 +622,7 @@ body.video-normal #video-overlay {
     --widget-left: 50%;
   }
 
-  .discord-icon img {
+  .discord-icon #discord-avatar {
     width: 12vmin !important;
     height: 12vmin !important;
     max-width: 48px !important;
