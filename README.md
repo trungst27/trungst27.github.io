@@ -1,71 +1,85 @@
-# Self-Hosted Bio Website
+# Teung | Personal Website
 
-This project is a customizable self-hosted bio webpage template where users can share links to their profiles or any other content, accompanied by background music and video. It's designed to provide a personalized online presence with a unique aesthetic.
+[Visit my website](https://trungxsth.id.vn/) · [GitHub @trungst27](https://github.com/trungst27)
+
+I'm **Teung**, a third-year Economics student. This repository contains my personal website: a place for my profile, social links, and live Discord presence.
+
+The current site is a personal bio page, with room to grow into a learning portfolio for future coursework and projects.
 
 ## Features
 
-- **Customizable Content:** Users can personalize their bio with their profile picture, username, user description, and links to their preferred platforms (e.g., Discord, GitHub, Tiktok).
-  
-- **Background Music and Video:** The webpage includes options for background music and video to enhance the user experience. Users can set their preferred audio and video content to play automatically when someone visits their bio.
+- An animated terminal introduction with typewriter text.
+- A profile card with a translucent background, social links, and eight AI tool and agent logos.
+- A looping video background and background music, set to **50% volume** by default. Music starts after user interaction.
+- Live Discord display name, status, and shared activities, with a custom Po avatar.
+- Hover tilt, a glow that responds to audio, and Neko cat animations.
+- Responsive styling for desktop and smaller screens.
 
-- **Terminal-Like Interface:** The template incorporates a terminal-like interface for a distinctive and interactive design. It includes buttons for control (close, minimize, maximize) to add to the aesthetic and potentially provide future functionality.
+## Technology
 
-## Usage
+| Area | Technology |
+| --- | --- |
+| Page structure | HTML |
+| Styling and layout | CSS |
+| Interactions and effects | Vanilla JavaScript |
+| Live Discord presence | Lanyard REST API and WebSocket |
+| Hosting | GitHub Pages |
+| Custom domain | `trungxsth.id.vn` |
 
-1. **Setup:**
-   - Clone or download the repository to your local machine.
-   - Customize the HTML, CSS, and JavaScript files according to your preferences. You can modify the content, styling, and functionality to reflect your personality and showcase your interests.
+## Run locally
 
-2. **Add Content:**
-   - Replace the default profile picture (`default.jpg`) with your own picture.
-   - Update the username and user description in the HTML file (`index.html`) to reflect your identity and interests.
-   - Add links to your preferred platforms in the HTML file. You can modify the existing links or add new ones based on your online presence.
+From the repository folder containing `index.html`, start a static server with Python 3:
 
-3. **Background Music and Video:**
-   - Replace the default audio and video files in the `assets/music` and `assets/back` directories, respectively, with your own audio and video content.
-   - Ensure that your audio and video files are in the correct formats and adjust the `<source>` tags in the HTML file accordingly.
+```sh
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-4. **Hosting:**
-   - Host the modified files on your preferred web hosting service or server to make your bio webpage accessible online.
-   - Ensure that your hosting service supports HTML, CSS, JavaScript, and multimedia file formats for proper functionality.
+Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/). After the introduction finishes, press **Enter** or click the terminal to reveal the profile.
 
-5. **Share Your Bio:**
-   - Once your bio webpage is live, share the URL with friends, followers, or anyone interested in learning more about you.
-   - Encourage visitors to explore your bio, listen to the background music, and watch the background video while discovering your online presence through the provided links.
+The website requires no package installation or build step. External fonts, Font Awesome icons, and live Discord data require an internet connection.
+
+## Project guide
+
+| File or folder | Purpose |
+| --- | --- |
+| [`index.html`](index.html) | Profile text, social links, AI logos, Discord ID, and asset references |
+| [`styles.css`](styles.css) | Main layout, widget appearance, and responsive styling |
+| [`assets/js/script.js`](assets/js/script.js) | Terminal introduction and transition into the profile |
+| [`assets/js/username-animation.js`](assets/js/username-animation.js) | Animated display-name variants |
+| [`assets/js/title.js`](assets/js/title.js) | Animated browser tab title |
+| [`assets/js/music.js`](assets/js/music.js) | Playlist, playback, and default volume |
+| [`assets/js/audio-visualizer.js`](assets/js/audio-visualizer.js) | Profile glow driven by audio |
+| [`assets/js/lanyard.js`](assets/js/lanyard.js) | Live Discord name, status, activities, and reconnection handling |
+| [`assets/js/discord.js`](assets/js/discord.js) | Discord avatar-decoration lookup |
+| [`assets/js/tilt-effect.js`](assets/js/tilt-effect.js) and [`assets/css/tilt-effect.css`](assets/css/tilt-effect.css) | Profile card tilt effect |
+| [`assets/js/neko.js`](assets/js/neko.js) and [`assets/js/neko-init.js`](assets/js/neko-init.js) | Neko cat animations |
+| [`assets/pfp/`](assets/pfp/) | Profile images; the main avatar is `default.png` |
+| [`assets/back/`](assets/back/) | Background video |
+| [`assets/music/`](assets/music/) | Background audio files |
+| [`assets/logo/ai/`](assets/logo/ai/) | AI logo assets and their source notes |
+| [`Po-Kung-Fu-Panda-Eating-Noodles.webp`](Po-Kung-Fu-Panda-Eating-Noodles.webp) | Custom avatar used by the Discord widget |
+| [`CNAME`](CNAME) | GitHub Pages custom-domain setting |
+
+When changing a CSS or JavaScript file that has a `?v=...` value in `index.html`, update that value so browsers load the new version.
 
 ## Live Discord widget
 
-- Set the account ID in `data-discord-user-id` on `.discord-widget` in `index.html`.
-- Join the [official Lanyard server](https://discord.gg/lanyard) with that account
-  so [Lanyard](https://github.com/Phineas/lanyard) can expose its presence. No API key is required.
-- The widget receives live WebSocket updates, reconnects after interruptions, and
-  falls back to a REST check every 30 seconds while live updates are unavailable.
-- The Discord avatar uses the local `Po-Kung-Fu-Panda-Eating-Noodles.webp` image.
-  Display name, status, and shared activities come from Discord through Lanyard.
-- An unavailable connection is shown separately from an actual Offline status.
+The account ID is configured with `data-discord-user-id` on `.discord-widget` in `index.html`.
 
-## Contributors
+To receive live presence, the configured account must join the [official Lanyard server](https://discord.gg/lanyard). [Lanyard](https://github.com/Phineas/lanyard) exposes the account's presence and shared activities through its public API; reading this data requires no API key.
 
-- [c0mplex](https://www.facebook.com/enou456/) - Creator and maintainer
+The widget receives WebSocket updates and reconnects after interruptions. While live updates are unavailable, it checks the REST API every 30 seconds. A connection failure displays **Unavailable**, separately from Discord's **Offline** status.
 
-## License
+The Po avatar is a local image and stays in place while the display name, status, and activities update from Discord.
 
-This project is licensed under the [MIT License](LICENSE). Feel free to customize and use it according to your needs. Contributions are welcome!
+## Deployment
 
-## Previews
+The site is published through GitHub Pages from `main`, using the domain configured in [`CNAME`](CNAME). Pushing updates to `main` starts the repository's Pages deployment.
 
-[Demo Site](trungxsth.id.vn)
+Live website: **[trungxsth.id.vn](https://trungxsth.id.vn/)**
 
-![image](https://i.postimg.cc/524RpJKb/1.png)
+## License and assets
 
-![image](https://i.ibb.co/S7rBVbtb/preview.png)
+See [`LICENSE`](LICENSE) for the project's MIT license and copyright notices.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to customize and use it according to your needs. Contributions are welcome!
-
-## Credits
-
-Special thanks to [c0mplex](https://www.facebook.com/enou456/) for the original idea and template.
-
----
+AI logo sources and their licensing notes are documented in [`assets/logo/ai/README.md`](assets/logo/ai/README.md). Other external resources used by the page include Google Fonts, Font Awesome, and Lanyard.
