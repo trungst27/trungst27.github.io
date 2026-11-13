@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title></title>
-  <link rel="stylesheet" type="text/css" href="styles.css?v=ai-tools-2">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=discord-live-1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="icon" type="image/x-icon" href="./assets/favico/default.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,21 +76,21 @@
         </p>
       </div>  
 
-      <div class="discord-widget">
+      <div class="discord-widget" data-discord-user-id="1482005776469069927">
         <div class="discord-content">
           <div class="discord-icon">
-            <img id="discord-avatar" src="" alt="Discord Avatar" draggable="false" loading="lazy">
+            <img id="discord-avatar" src="./Po-Kung-Fu-Panda-Eating-Noodles.webp" alt="Po eating noodles" draggable="false" loading="lazy">
+            <span id="discord-status-dot" class="status-unknown" title="Connecting" aria-label="Connecting"></span>
           </div>
           <div class="discord-meta">
-            <b id="discord-username"></b>
+            <b id="discord-username">Discord</b>
             <div>
-              <span id="discord-status-dot"></span>
-              <span id="discord-status-text"></span>
+              <span id="discord-status-text" role="status" aria-live="polite">Connecting...</span>
             </div>
           </div>
         </div>
         <div class="discord-activity">
-          <div id="discord-activity-info">
+          <div id="discord-activity-info" class="hidden" aria-hidden="true">
             <div id="discord-album-art"></div>
             <div class="discord-activity-content">
               <div id="discord-activity-name"></div>
@@ -98,7 +98,7 @@
               <div id="discord-activity-state"></div>
             </div>
           </div>
-          <div id="discord-no-activity">I'm not currently doing anything!</div>
+          <div id="discord-no-activity">Connecting to Discord...</div>
         </div>
       </div>
 
@@ -125,8 +125,8 @@
     </div>
   </div>
   
-  <script src="./assets/js/lanyard.js"></script>
-  <script src="./assets/js/discord.js"></script>
+  <script src="./assets/js/lanyard.js?v=discord-live-1"></script>
+  <script src="./assets/js/discord.js?v=discord-live-1"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/title.js"></script>
   <script src="./assets/js/username-animation.js"></script>

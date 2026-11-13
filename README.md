@@ -33,6 +33,17 @@ This project is a customizable self-hosted bio webpage template where users can 
    - Once your bio webpage is live, share the URL with friends, followers, or anyone interested in learning more about you.
    - Encourage visitors to explore your bio, listen to the background music, and watch the background video while discovering your online presence through the provided links.
 
+## Live Discord widget
+
+- Set the account ID in `data-discord-user-id` on `.discord-widget` in `index.html`.
+- Join the [official Lanyard server](https://discord.gg/lanyard) with that account
+  so [Lanyard](https://github.com/Phineas/lanyard) can expose its presence. No API key is required.
+- The widget receives live WebSocket updates, reconnects after interruptions, and
+  falls back to a REST check every 30 seconds while live updates are unavailable.
+- The Discord avatar uses the local `Po-Kung-Fu-Panda-Eating-Noodles.webp` image.
+  Display name, status, and shared activities come from Discord through Lanyard.
+- An unavailable connection is shown separately from an actual Offline status.
+
 ## Contributors
 
 - [c0mplex](https://www.facebook.com/enou456/) - Creator and maintainer
