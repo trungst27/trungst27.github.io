@@ -6,7 +6,7 @@ let currentSongIndex = 0;
 let isPlaying = false;
 const audio = new Audio();
 
-audio.volume = 1.0;
+audio.volume = 0.5;
 
 function shuffleArray(array) {
     const newArray = [...array];
