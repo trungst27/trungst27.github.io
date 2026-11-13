@@ -1,5 +1,5 @@
 const songs = [
-    "Khó Vẽ Nụ Cười - VAVH.mp3"
+    "Khong Buong ft Nang Co Mang Em Ve - Halee.mp3"
 ];
 
 let currentSongIndex = 0;
