@@ -247,4 +247,4 @@ Personal direction and curation by **Teung**. Built with assistance from OpenAI�
 - Room imagery: generated for this project; [scene provenance](assets/scenes/README.md).
 - README previews: actual browser captures of the After Hours interface, showing desktop and mobile layouts. Presence and playback values in the images are snapshots.
 
-The code is distributed under the [MIT License](LICENSE), including the copyright notices recorded there. Third-party music, avatars, logos, fonts and artwork retain their respective ownership and license terms.
+Teung’s personal customizations are distributed under the [MIT License](LICENSE), Copyright (c) 2025–2026 Teung. Asset sources and license notices are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the linked asset licenses. Third-party music, avatars, logos, fonts and artwork retain their respective ownership and license terms.
