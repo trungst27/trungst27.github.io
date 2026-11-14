@@ -1,149 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="styles.css?v=avatars-2">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="icon" type="image/x-icon" href="./assets/favico/default.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teung’s Space — stay for a while</title>
+  <meta name="description" content="Teung’s personal space. A little music, a little company, and live Discord presence.">
+  <meta name="theme-color" content="#171b17">
+  <link rel="icon" href="./assets/favico/default.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-  <link rel="stylesheet" href="./assets/css/tilt-effect.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=living-room-2">
+  <link rel="stylesheet" href="./assets/css/home-player.css?v=mini-player-2">
+  <script src="./assets/js/config.js?v=2" defer></script>
+  <script src="./assets/js/library-data.js?v=2" defer></script>
+  <script src="./assets/js/music.js?v=night-desk-5" defer></script>
+  <script src="./assets/js/library.js?v=after-hours-motion-2" defer></script>
+  <script src="./assets/js/room-ambience.js?v=living-room-2" defer></script>
+  <script src="./assets/js/vinyl-intro.js?v=home-deck-1" defer></script>
+  <script src="./assets/js/script.js?v=mini-player-2" defer></script>
+  <script src="./assets/js/lanyard.js?v=discord-live-1" defer></script>
+  <script src="./assets/js/discord.js?v=discord-live-1" defer></script>
+  <script src="./assets/js/audio-visualizer.js?v=after-hours-motion-2" defer></script>
 </head>
-
-  <div id="terminal">
-    <div id="terminal-header">
-      <div id="terminal-buttons">
-
-        <div class="terminal-button" id="close-button"></div>
-        <div class="terminal-button" id="minimize-button"></div>
-        <div class="terminal-button" id="maximize-button"></div>
-      </div>
-    </div>
-    <div id="terminal-content">
-      <p id="terminal-text"></p>
+<body class="home-view mini-player-home">
+  <a class="skip-link" href="#music-controls">Skip to player</a>
+  <div id="video-background" aria-hidden="true"><video muted loop playsinline preload="none" id="myVideo"><source src="./assets/back/default.mp4" type="video/mp4"></video></div>
+  <div class="home-backdrop" aria-hidden="true"><canvas id="room-ambience" class="room-ambience"></canvas></div>
+  <div id="vinyl-intro" class="vinyl-intro" aria-hidden="true" hidden>
+    <svg class="portal-scene" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="vinyl-surface"><stop offset="0" stop-color="#252c27"/><stop offset=".38" stop-color="#0a100c"/><stop offset=".72" stop-color="#202823"/><stop offset="1" stop-color="#080d0a"/></radialGradient>
+        <linearGradient id="vinyl-reflection" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e1ead1" stop-opacity=".02"/><stop offset=".48" stop-color="#e1ead1" stop-opacity=".3"/><stop offset=".53" stop-color="#e1ead1" stop-opacity=".02"/><stop offset="1" stop-color="#e1ead1" stop-opacity=".15"/></linearGradient>
+        <mask id="portal-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%"><rect width="100%" height="100%" fill="white"/><circle id="portal-aperture" cx="50%" cy="50%" r="0" fill="black"/></mask>
+      </defs>
+      <g mask="url(#portal-mask)">
+        <rect width="100%" height="100%" fill="#0d1510"/>
+        <g id="portal-record-position"><g id="portal-record">
+          <circle r="180" fill="url(#vinyl-surface)" stroke="#74806a" stroke-width="1"/>
+          <g fill="none" stroke="#a7b69d" stroke-opacity=".18" stroke-width=".7"><circle r="171"/><circle r="164"/><circle r="157"/><circle r="150"/><circle r="143"/><circle r="136"/><circle r="129"/><circle r="122"/><circle r="115"/><circle r="108"/><circle r="101"/><circle r="94"/><circle r="87"/><circle r="80"/><circle r="73"/><circle r="66"/></g>
+          <circle r="178" fill="url(#vinyl-reflection)"/>
+          <g id="portal-label"><circle r="57" fill="#c3d19e"/><circle r="51" fill="none" stroke="#3e5033" stroke-opacity=".5"/><text y="-7" text-anchor="middle" class="portal-name">Teung</text><text y="16" text-anchor="middle" class="portal-label-note">STAY FOR A WHILE</text><circle cy="33" r="3" fill="#172017"/></g>
+        </g></g>
+      </g>
+    </svg>
+    <p class="portal-caption">A little music, a little company.</p>
+  </div>
+  <button id="skip-intro" class="intro-skip" type="button" hidden>Skip intro <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+  <div id="terminal" class="entry-screen">
+    <div class="entry-content">
+      <img class="entry-avatar" src="./Po-Kung-Fu-Panda-Eating-Noodles.webp" alt="Po eating noodles" width="96" height="96">
+      <h1>Make yourself at home.</h1><p>A little music, a little company.</p>
+      <button id="close-button" class="button button-primary" type="button">Enter Teung’s Space <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      <p class="entry-note">Music starts at 50% volume. You’re in control.</p>
     </div>
   </div>
-
-  <div id="video-background">
-    <video autoplay muted loop id="myVideo">
-      <source src="./assets/back/default.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <div id="audio-background">
-      <div id="music-controls">
-        <input type="range" id="volume-slider" min="0" max="100" value="50">
-        <div id="progress-container">
-          <div id="progress-bar"></div>
+  <div id="site-shell" class="site-shell" hidden>
+    <header class="site-header">
+      <a href="#home" class="wordmark">Teung’s Space <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20 18 5M8 16C1 15 3 8 8 9c3 1 3 4 0 7Zm5-6c-3-5 1-9 4-7 3 2 0 6-4 7Zm0 2c5-5 10-2 8 1-2 3-6 2-8-1Z" fill="currentColor"/></svg></a>
+      <div class="header-actions"><button id="replay-intro" class="intro-replay" type="button" aria-label="Replay intro" title="Replay intro"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i><span>Replay intro</span></button>
+      <button id="background-toggle" class="icon-button background-toggle" type="button" aria-label="Enable motion" title="Enable motion" aria-pressed="false"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></button></div>
+    </header>
+    <main id="workspace" class="workspace">
+      <aside id="blurred-box" class="profile-sidebar" aria-label="About Teung">
+        <div class="profile-identity"><img id="profile-picture" src="./Po-Kung-Fu-Panda-Eating-Noodles.webp" alt="Po eating noodles" width="120" height="120"><div><h2 class="profile-name">Teung</h2><h1 id="home-title" class="home-title" tabindex="-1">Hey, I’m Teung.</h1><p class="profile-study">Third-Year Economics Student</p></div></div>
+        <div class="profile-details"><p>KTPT2 – Faculty of Development Economics, VNU</p><p class="profile-note">Still here wy st</p></div>
+        <div class="home-actions"><button id="home-choose-music" class="button button-primary home-listen-link" type="button" aria-controls="library" aria-expanded="false">Choose a song <i class="fa-solid fa-music" aria-hidden="true"></i></button></div>
+        <div class="badges-container" aria-label="Profile badges"><img src="./assets/badge/developer.png" alt="Developer" width="20" height="20"><img src="./assets/badge/love.png" alt="Love" width="20" height="20"><img src="./assets/badge/music.png" alt="Music" width="20" height="20"><img src="./assets/badge/verified.png" alt="Verified" width="20" height="20"></div>
+        <div class="links" aria-label="Social links">
+          <a href="https://discord.gg/HJCcg4txdk" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/trungsth1827" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://github.com/trungst27" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@anhyeuthaicuc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          <a href="https://x.com/yeust_tr27" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="mailto:dtrungnee206@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
         </div>
-      </div>
-    </div>
+        <section class="discord-widget" data-discord-user-id="1482005776469069927" aria-label="Live Discord presence">
+          <div class="discord-content"><div class="discord-icon"><img id="discord-avatar" src="./assets/pfp/default.png" alt="Discord avatar" width="44" height="44"><img id="avatar-frame" src="./assets/pfp/frame-placeholder.svg" alt="" aria-hidden="true"><span id="discord-status-dot" class="status-unknown" title="Connecting" aria-label="Connecting"></span></div><div class="discord-meta"><b id="discord-username">Discord</b><span id="discord-status-text" role="status" aria-live="polite">Connecting…</span></div></div>
+          <div class="discord-activity"><div id="discord-activity-info" class="hidden" aria-hidden="true"><div id="discord-album-art"></div><div class="discord-activity-content"><div id="discord-activity-name"></div><div id="discord-activity-details"></div><div id="discord-activity-state"></div></div></div><div id="discord-no-activity">Connecting to Discord…</div></div>
+        </section>
+        <div class="ai-section"><p class="section-label">Tools &amp; agents</p><div class="ai-tools" role="group" aria-label="AI tools and agents"><img class="ai-tool-monochrome" src="./assets/logo/ai/openai.svg" alt="ChatGPT" title="ChatGPT"><img src="./assets/logo/ai/claude-color.svg" alt="Claude" title="Claude"><img src="./assets/logo/ai/gemini-color.svg" alt="Gemini" title="Gemini"><img class="ai-tool-monochrome" src="./assets/logo/ai/deepseek-harness.svg" alt="DeepSeek Harness" title="DeepSeek Harness"><img src="./assets/logo/ai/pi-harness.svg" alt="Pi coding agent" title="Pi"><img class="ai-tool-monochrome" src="./assets/logo/ai/manus.svg" alt="Manus" title="Manus"><img src="./assets/logo/ai/qwen-color.svg" alt="Qwen" title="Qwen"><img class="ai-tool-light" src="./assets/logo/ai/kimi-color.svg" alt="Kimi" title="Kimi"></div></div>
+        <p class="sidebar-footer">A small corner of the internet.<br><a href="./admin.html">Manage library <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></p>
+      </aside>
+    </main>
+      <section class="listening-room" aria-label="Now playing">
+        <section id="music-controls" class="player" aria-label="Music player" tabindex="-1">
+              <div class="turntable" aria-hidden="true"><div class="vinyl-disc"><div class="vinyl-face"><div id="player-art" class="cover cover-player" aria-hidden="true"></div><span class="vinyl-spindle"></span></div></div></div>
+              <div class="deck-body">
+              <div class="now-playing"><div class="now-playing-text"><strong id="player-title">Choose something to listen to</strong><span id="player-artist">Your next little escape.</span></div><button id="player-favorite" class="icon-button" type="button" aria-label="Add current track to favorites" aria-pressed="false" disabled><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+              <div class="playback"><div class="playback-buttons"><button id="shuffle-button" class="icon-button secondary-control" type="button" aria-label="Shuffle" aria-pressed="false"><i class="fa-solid fa-shuffle" aria-hidden="true"></i></button><button id="previous-button" class="icon-button" type="button" aria-label="Previous track"><i class="fa-solid fa-backward-step" aria-hidden="true"></i></button><button id="play-button" class="play-button" type="button" aria-label="Play"><i class="fa-solid fa-play" aria-hidden="true"></i></button><button id="next-button" class="icon-button" type="button" aria-label="Next track"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button><button id="repeat-button" class="icon-button secondary-control" type="button" aria-label="Repeat off" aria-pressed="false"><i class="fa-solid fa-repeat" aria-hidden="true"></i><span id="repeat-one" hidden>1</span></button></div><div class="timeline"><span id="elapsed-time">0:00</span><label class="sr-only" for="seek-slider">Seek in track</label><input id="seek-slider" type="range" min="0" max="1000" value="0" disabled><span id="duration-time">0:00</span></div></div>
+              <div class="player-options"><button id="glass-button" class="icon-button" aria-label="Enable glass effect" aria-pressed="false" title="Enable glass effect" type="button"><i class="fa-solid fa-droplet" aria-hidden="true"></i></button><button id="mute-button" class="icon-button" aria-label="Mute" type="button"><i class="fa-solid fa-volume-low" aria-hidden="true"></i></button><label class="sr-only" for="volume-slider">Volume</label><input type="range" id="volume-slider" min="0" max="100" value="50"><span id="volume-value">50%</span><button id="queue-button" class="icon-button" type="button" aria-label="Open play queue" aria-expanded="false" aria-controls="queue-panel"><i class="fa-solid fa-list-ul" aria-hidden="true"></i><span id="queue-count" class="queue-count" hidden>0</span></button><button id="library-toggle" class="text-button library-toggle" type="button" aria-controls="library" aria-expanded="false"><i class="fa-solid fa-music" aria-hidden="true"></i> Library</button></div>
+              </div>
+              <div id="player-feedback" class="player-feedback" role="status" aria-live="polite" hidden><span id="player-message"></span><button id="retry-button" class="text-button" type="button">Try again</button><button id="dismiss-player-message" class="icon-button" type="button" aria-label="Dismiss player message"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+            </section>
+        <aside id="queue-panel" class="queue-panel" aria-labelledby="queue-heading" hidden><div class="queue-header"><h2 id="queue-heading">Up next</h2><button id="close-queue" class="icon-button" aria-label="Close play queue" type="button"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div><p class="muted">Your queue plays before the rest of the library.</p><ol id="queue-list"></ol><button id="clear-queue" class="text-button" type="button">Clear queue</button><div class="queue-options" role="group" aria-label="Playback options"><button id="queue-shuffle" class="button" type="button" aria-pressed="false">Shuffle off</button><button id="queue-repeat" class="button" type="button" aria-pressed="false">Repeat off</button></div></aside>
+        <section id="library" class="library-panel" aria-labelledby="library-heading" tabindex="-1" hidden>
+                <button id="close-library" class="icon-button close-library" type="button" aria-label="Close music library"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                <div class="library-toolbar"><div><h3 id="library-heading">The collection</h3><p id="track-count" class="muted">Loading your corner of music…</p></div><label class="search-field"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="sr-only">Search music</span><input id="music-search" type="search" placeholder="Find a song or artist…" autocomplete="off"></label></div>
+                <div class="mood-filters" role="group" aria-label="Filter music"><button class="mood-button is-active" data-filter="all" aria-pressed="true" type="button">All tracks</button><button class="mood-button" data-filter="chill" aria-pressed="false" type="button">Chill</button><button class="mood-button" data-filter="study" aria-pressed="false" type="button">Study</button><button class="mood-button" data-filter="late-night" aria-pressed="false" type="button">Late Night</button><button class="mood-button" data-filter="favorites" aria-pressed="false" type="button"><i class="fa-regular fa-heart" aria-hidden="true"></i> Favorites</button></div>
+                <p id="library-notice" class="notice" role="status" hidden></p>
+                <div class="track-list-heading" aria-hidden="true"><span>Track</span><span>Source / Time</span></div>
+                <div id="track-list" class="track-list" aria-busy="true"><p class="empty-state">Gathering the music…</p></div>
+                <section id="soundcloud-panel" class="soundcloud-panel" aria-label="SoundCloud player" hidden><div class="soundcloud-heading"><span><i class="fa-brands fa-soundcloud" aria-hidden="true"></i> Playing on SoundCloud</span><a id="soundcloud-link" target="_blank" rel="noopener noreferrer">Open on SoundCloud <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div><div id="soundcloud-mount"></div></section>
+                <div class="library-footer"><span>Picked by Teung. Played your way.</span><span id="library-origin">Personal collection</span></div>
+              </section>
+      </section>
 
-    </div>
-    <div id="video-overlay"></div>
-    <div id="blurred-box" class="tilt-element">
-      <img id="profile-picture" src="./Po-Kung-Fu-Panda-Eating-Noodles.webp" alt="Po eating noodles">
-      <p id="username-container" style="color: white; font-weight: bold; font-size: 32px;">
-        <span id="username">VietTrung</span>
-        <span id="typing-cursor">|</span>
-      </p>
-      <div class="badges-container">
-        <img src="./assets/badge/developer.png" alt="dev badge">
-        <img src="./assets/badge/love.png" alt="heart badge">
-        <img src="./assets/badge/music.png" alt="music badge">
-        <img src="./assets/badge/verified.png" alt="verified badge">
-      </div>
-      <div class="ai-tools" role="group" aria-label="AI tools and agents">
-        <img class="ai-tool-monochrome" src="./assets/logo/ai/openai.svg" alt="ChatGPT" title="ChatGPT" draggable="false">
-        <img src="./assets/logo/ai/claude-color.svg" alt="Claude" title="Claude" draggable="false">
-        <img src="./assets/logo/ai/gemini-color.svg" alt="Gemini" title="Gemini" draggable="false">
-        <img class="ai-tool-monochrome" src="./assets/logo/ai/deepseek-harness.svg" alt="DeepSeek Harness" title="DeepSeek Harness" draggable="false">
-        <img src="./assets/logo/ai/pi-harness.svg" alt="Pi coding agent" title="Pi — Agent Harness" draggable="false">
-        <img class="ai-tool-monochrome" src="./assets/logo/ai/manus.svg" alt="Manus" title="Manus" draggable="false">
-        <img src="./assets/logo/ai/qwen-color.svg" alt="Qwen" title="Qwen / 通义千问" draggable="false">
-        <img class="ai-tool-light" src="./assets/logo/ai/kimi-color.svg" alt="Kimi" title="Kimi" draggable="false">
-      </div>
 
-      <div class="user-description">
-        <p id="user-description" style="color: white;">
-          Third-Year Economics Student<br> KTPT2 – Faculty of Development Economics, VNU<br>Still here wy st
-        </p>
-      </div>  
 
-      <div class="discord-widget" data-discord-user-id="1482005776469069927">
-        <div class="discord-content">
-          <div class="discord-icon">
-            <img id="discord-avatar" src="./assets/pfp/default.png" alt="Discord avatar" draggable="false" loading="lazy">
-            <img id="avatar-frame" alt="" aria-hidden="true" draggable="false">
-            <span id="discord-status-dot" class="status-unknown" title="Connecting" aria-label="Connecting"></span>
-          </div>
-          <div class="discord-meta">
-            <b id="discord-username">Discord</b>
-            <div>
-              <span id="discord-status-text" role="status" aria-live="polite">Connecting...</span>
-            </div>
-          </div>
-        </div>
-        <div class="discord-activity">
-          <div id="discord-activity-info" class="hidden" aria-hidden="true">
-            <div id="discord-album-art"></div>
-            <div class="discord-activity-content">
-              <div id="discord-activity-name"></div>
-              <div id="discord-activity-details"></div>
-              <div id="discord-activity-state"></div>
-            </div>
-          </div>
-          <div id="discord-no-activity">Connecting to Discord...</div>
-        </div>
-      </div>
-
-      <div class="links">
-        <a href="https://discord.gg/HJCcg4txdk" target="_blank">
-          <i class="fab fa-discord"></i>
-        </a> 
-        <a href="https://www.facebook.com/trungsth1827" target="_blank">
-          <i class="fab fa-facebook"></i> 
-        </a> 
-        <a href="https://github.com/trungst27" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a> 
-        <a href="https://www.tiktok.com/@anhyeuthaicuc" target="_blank">
-          <i class="fa-brands fa-tiktok"></i>
-        </a> 
-        <a href="https://x.com/yeust_tr27" target="_blank">
-          <i class="fa-brands fa-twitter"></i>
-        </a> 
-        <a href="mailto:dtrungnee206@gmail.com" target="_blank">
-          <i class="fa-brands fa-google mail"></i>
-        </a> 
-      </div>
-    </div>
+    <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
   </div>
-  
-  <script src="./assets/js/lanyard.js?v=discord-live-1"></script>
-  <script src="./assets/js/discord.js?v=discord-live-1"></script>
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/title.js"></script>
-  <script src="./assets/js/username-animation.js"></script>
-  <script src="./assets/js/tilt-effect.js"></script>
-  <script src="./assets/js/audio-visualizer.js"></script>
-  <script src="./assets/js/neko.js"></script>
-  <script src="./assets/js/neko-init.js"></script>
-  <script src="./assets/js/music.js?v=halee-2"></script>
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      function startMusicOnUserInteraction() {
-        window.MusicPlayer.start();
-      }
-      document.addEventListener('keydown', function(e) {
-        if (e.key === "Enter") startMusicOnUserInteraction();
-      });
-      document.addEventListener('click', startMusicOnUserInteraction, { once: true });
-    });
-  </script>
+  <noscript><div class="noscript-message">This listening space needs JavaScript. You can still find me on <a href="https://github.com/trungst27">GitHub</a>.</div></noscript>
 </body>
+</html>
+

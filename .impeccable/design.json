@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T18:17:51.376Z",
+  "title": "Design System: Teung’s Space — Night Desk",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Forest Charcoal",
+        "tonalRamp": [
+          "oklch(15% 0.0023 145.2)",
+          "oklch(26% 0.0059 145.2)",
+          "oklch(37% 0.0095 145.2)",
+          "oklch(48% 0.0098 145.2)",
+          "oklch(59% 0.0098 145.2)",
+          "oklch(71% 0.0098 145.2)",
+          "oklch(83% 0.0083 145.2)",
+          "oklch(95% 0.0024 145.2)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Dark Forest Panel",
+        "tonalRamp": [
+          "oklch(15% 0.0025 151.3)",
+          "oklch(26% 0.0063 151.3)",
+          "oklch(37% 0.0102 151.3)",
+          "oklch(48% 0.0106 151.3)",
+          "oklch(59% 0.0106 151.3)",
+          "oklch(71% 0.0106 151.3)",
+          "oklch(83% 0.0090 151.3)",
+          "oklch(95% 0.0026 151.3)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Forest Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0032 145.2)",
+          "oklch(26% 0.0083 145.2)",
+          "oklch(37% 0.0133 145.2)",
+          "oklch(48% 0.0138 145.2)",
+          "oklch(59% 0.0138 145.2)",
+          "oklch(71% 0.0138 145.2)",
+          "oklch(83% 0.0117 145.2)",
+          "oklch(95% 0.0035 145.2)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "tonalRamp": [
+          "oklch(15% 0.0032 93.0)",
+          "oklch(26% 0.0082 93.0)",
+          "oklch(37% 0.0132 93.0)",
+          "oklch(48% 0.0137 93.0)",
+          "oklch(59% 0.0137 93.0)",
+          "oklch(71% 0.0137 93.0)",
+          "oklch(83% 0.0116 93.0)",
+          "oklch(95% 0.0034 93.0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Sage Gray",
+        "tonalRamp": [
+          "oklch(15% 0.0041 125.4)",
+          "oklch(26% 0.0106 125.4)",
+          "oklch(37% 0.0170 125.4)",
+          "oklch(48% 0.0176 125.4)",
+          "oklch(59% 0.0176 125.4)",
+          "oklch(71% 0.0176 125.4)",
+          "oklch(83% 0.0150 125.4)",
+          "oklch(95% 0.0044 125.4)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Muted Olive",
+        "tonalRamp": [
+          "oklch(15% 0.0163 120.4)",
+          "oklch(26% 0.0419 120.4)",
+          "oklch(37% 0.0675 120.4)",
+          "oklch(48% 0.0699 120.4)",
+          "oklch(59% 0.0699 120.4)",
+          "oklch(71% 0.0699 120.4)",
+          "oklch(83% 0.0594 120.4)",
+          "oklch(95% 0.0175 120.4)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Deep Olive Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0063 129.7)",
+          "oklch(26% 0.0162 129.7)",
+          "oklch(37% 0.0262 129.7)",
+          "oklch(48% 0.0271 129.7)",
+          "oklch(59% 0.0271 129.7)",
+          "oklch(71% 0.0271 129.7)",
+          "oklch(83% 0.0230 129.7)",
+          "oklch(95% 0.0068 129.7)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Moss Line",
+        "tonalRamp": [
+          "oklch(15% 0.0057 136.0)",
+          "oklch(26% 0.0147 136.0)",
+          "oklch(37% 0.0237 136.0)",
+          "oklch(48% 0.0245 136.0)",
+          "oklch(59% 0.0245 136.0)",
+          "oklch(71% 0.0245 136.0)",
+          "oklch(83% 0.0209 136.0)",
+          "oklch(95% 0.0061 136.0)"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Warm Peach",
+        "tonalRamp": [
+          "oklch(15% 0.0176 33.1)",
+          "oklch(26% 0.0453 33.1)",
+          "oklch(37% 0.0730 33.1)",
+          "oklch(48% 0.0755 33.1)",
+          "oklch(59% 0.0755 33.1)",
+          "oklch(71% 0.0755 33.1)",
+          "oklch(83% 0.0642 33.1)",
+          "oklch(95% 0.0189 33.1)"
+        ]
+      },
+      "player-surface": {
+        "role": "neutral",
+        "displayName": "Player Forest",
+        "tonalRamp": [
+          "oklch(15% 0.0041 141.6)",
+          "oklch(26% 0.0106 141.6)",
+          "oklch(37% 0.0171 141.6)",
+          "oklch(48% 0.0177 141.6)",
+          "oklch(59% 0.0177 141.6)",
+          "oklch(71% 0.0177 141.6)",
+          "oklch(83% 0.0151 141.6)",
+          "oklch(95% 0.0044 141.6)"
+        ]
+      },
+      "player-border": {
+        "role": "neutral",
+        "displayName": "Player Moss",
+        "tonalRamp": [
+          "oklch(15% 0.0111 127.0)",
+          "oklch(26% 0.0286 127.0)",
+          "oklch(37% 0.0461 127.0)",
+          "oklch(48% 0.0477 127.0)",
+          "oklch(59% 0.0477 127.0)",
+          "oklch(71% 0.0477 127.0)",
+          "oklch(83% 0.0405 127.0)",
+          "oklch(95% 0.0119 127.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Library Welcome",
+        "purpose": "Lora welcome headline with responsive sizing."
+      },
+      "headline": {
+        "displayName": "Section Heading",
+        "purpose": "Library and administrator section headings."
+      },
+      "title": {
+        "displayName": "Track Title",
+        "purpose": "Serif names in the vertical music library."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "General copy and everyday interface text."
+      },
+      "label": {
+        "displayName": "Control Label",
+        "purpose": "Compact field labels and supporting controls."
+      }
+    },
+    "shadows": [
+      {
+        "name": "profile",
+        "value": "0 8px 25px rgba(0,0,0,.2)",
+        "purpose": "Lift beneath the circular Panda profile."
+      },
+      {
+        "name": "player",
+        "value": "0 14px 42px rgba(0,0,0,.18)",
+        "purpose": "Lift beneath the single glass listening surface; the player itself has no shadow."
+      },
+      {
+        "name": "queue",
+        "value": "none",
+        "purpose": "Flat in-flow queue between deck and collection."
+      }
+    ],
+    "motion": [
+      {
+        "name": "room-material",
+        "value": "30fps desktop / 24fps phone targets; bounded canvas resolution",
+        "purpose": "Continuous window rain, noodle vapour and local lamplight, aligned with the scene crop. Independent of audio; paused by shared motion preference, hidden tab, offscreen scene. Original image is the fallback."
+      },
+      {
+        "name": "vinyl-portal",
+        "value": "2400ms total; 2200ms aperture; cubic-bezier(.65,0,.2,1) expansion",
+        "purpose": "Finite Home entrance with SVG record geometry and native Web Animations. Replay enables motion explicitly; Skip, Escape, hidden tab, resize or navigation cancels it without changing playback."
+      },
+      {
+        "name": "state-transition",
+        "value": "0.15s ease",
+        "purpose": "Background, color and play-overlay state changes."
+      },
+      {
+        "name": "profile-transition",
+        "value": "transform 0.3s ease",
+        "purpose": "A -3deg profile rotation on hover-capable pointers."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Initial motion preference. The header can persist an explicit teung.motion override; disabled motion removes transitions and loops and hides video. Hidden tabs cancel active sequences."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-desktop-min",
+        "value": "1440px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1050px"
+      },
+      {
+        "name": "phone-tablet-max",
+        "value": "760px"
+      },
+      {
+        "name": "narrow-phone-max",
+        "value": "420px"
+      },
+      {
+        "name": "small-phone-max",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Olive action used for entry, sign-in and publication.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Publish</button>",
+      "css": ".ds-button-primary{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:11px 22px;border-radius:7px;font-family:var(--sans,'DM Sans',sans-serif);font-size:13px;font-weight:500;line-height:1.6;cursor:pointer;transition:background .15s ease;background:var(--accent,#c3d19e);color:var(--accent-ink,#202719);border:1px solid var(--accent,#c3d19e)}.ds-button-primary:hover{background:#d7e4b7}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#c3d19e);outline-offset:5px;}.ds-button-primary:disabled{cursor:default;opacity:.4}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Forest action used for preview and saving drafts.",
+      "html": "<button class=\"ds-button-secondary\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M8 5v14l11-7z\"/></svg><span>Preview</span></button>",
+      "css": ".ds-button-secondary{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:11px 22px;border-radius:7px;font-family:var(--sans,'DM Sans',sans-serif);font-size:13px;font-weight:500;line-height:1.6;cursor:pointer;transition:background .15s ease;background:var(--surface,#242a24);color:var(--ink,#f2efe5);border:1px solid var(--line,#3e473a)}.ds-button-secondary:focus-visible{outline:2px solid var(--accent,#c3d19e);outline-offset:5px;}.ds-button-secondary:disabled{cursor:default;opacity:.4}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition:none}}"
+    },
+    {
+      "name": "Music Search",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Outlined pill search with the focus treatment on its enclosing field.",
+      "html": "<label class=\"ds-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"/><path d=\"m16 16 5 5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg><input class=\"ds-search-input\" aria-label=\"Search music\" type=\"search\" placeholder=\"Find a song or artist…\" autocomplete=\"off\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:10px;border:1px solid #626d56;border-radius:30px;padding:0 14px;width:min(250px,100%);min-height:40px;color:var(--muted,#b4b9ad);font-family:var(--sans,'DM Sans',sans-serif);}.ds-search svg{flex-shrink:0}.ds-search:focus-within{outline:2px solid var(--accent,#c3d19e);outline-offset:2px}.ds-search-input{width:100%;min-width:0;background:none;border:0;outline:none;font-family:var(--sans,'DM Sans',sans-serif);font-size:12px;line-height:1.6;color:var(--ink,#f2efe5);padding:10px 0;caret-color:var(--accent,#c3d19e)}.ds-search-input::placeholder{color:#afb6a6;opacity:1}"
+    },
+    {
+      "name": "Mood Filters",
+      "kind": "chip",
+      "refersTo": "mood-chip",
+      "description": "Outlined mood filters; selection uses olive fill and a semibold dark label.",
+      "html": "<div class=\"ds-moods\" role=\"group\" aria-label=\"Filter music\"><button class=\"ds-mood ds-mood-active\" type=\"button\" aria-pressed=\"true\">All tracks</button><button class=\"ds-mood\" type=\"button\" aria-pressed=\"false\">Chill</button><button class=\"ds-mood\" type=\"button\" aria-pressed=\"false\">Study</button></div>",
+      "css": ".ds-moods{display:flex;gap:8px;flex-wrap:wrap}.ds-mood{min-height:38px;padding:7px 19px;border:1px solid #67715b;border-radius:30px;background:transparent;color:#e0e5d6;font-family:var(--sans,'DM Sans',sans-serif);font-size:12px;line-height:1.6;cursor:pointer;transition:background .15s ease}.ds-mood:hover{background:#343d2c}.ds-mood:focus-visible{outline:2px solid var(--accent,#c3d19e);outline-offset:5px;}.ds-mood-active,.ds-mood-active:hover{background:var(--accent,#c3d19e);border-color:var(--accent,#c3d19e);color:var(--accent-ink,#202719);font-weight:600}@media(max-width:420px){.ds-moods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.ds-mood{padding:7px 9px;min-height:36px}}@media(prefers-reduced-motion:reduce){.ds-mood{transition:none}}"
+    },
+    {
+      "name": "Library Setup Card",
+      "kind": "card",
+      "refersTo": "setup-panel",
+      "description": "Administrator setup explanation on a softly raised forest surface.",
+      "html": "<section class=\"ds-setup\" aria-labelledby=\"ds-setup-title\"><div><h2 class=\"ds-setup-title\" id=\"ds-setup-title\">Give your collection a home.</h2><p class=\"ds-setup-copy\">Listening already works. Connect Supabase to upload files, save drafts and publish music for everyone.</p></div><ol class=\"ds-setup-steps\"><li>Create a Supabase project.</li><li>Run <code>supabase/schema.sql</code> and authorize your admin account.</li><li>Add your public project URL and publishable key to <code>assets/js/config.js</code>.</li></ol></section>",
+      "css": ".ds-setup{padding:25px;background:#252e21;border:1px solid #65734f;border-radius:12px;display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;color:var(--ink,#f2efe5);font-family:var(--sans,'DM Sans',sans-serif);line-height:1.6}.ds-setup-title{font-family:var(--serif,'Lora',Georgia,serif);font-size:25px;font-weight:500;line-height:1.2;margin:0 0 12px}.ds-setup-copy{font-size:13px;color:#d1dcc4;max-width:55ch;margin:0}.ds-setup-steps{font-size:12px;margin:0;padding-left:20px;color:#d1dcc4;line-height:2}.ds-setup code{overflow-wrap:anywhere}@media(max-width:760px){.ds-setup{grid-template-columns:1fr;padding:20px;gap:18px}}"
+    },
+    {
+      "name": "Music Track Row",
+      "kind": "custom",
+      "refersTo": "track-row",
+      "description": "Artwork, title, source and compact actions in the library’s divided vertical list. The specimen uses a generic title and the implemented Local audio fallback.",
+      "html": "<article class=\"ds-track\"><button class=\"ds-track-play\" type=\"button\" aria-label=\"Play track\"><span class=\"ds-cover\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M5.8 8.5a7 7 0 0 1 2.7-2.7m7 12.4a7 7 0 0 0 2.7-2.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></span><span class=\"ds-play-overlay\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M8 5v14l11-7z\"/></svg></span></button><div class=\"ds-track-copy\"><button class=\"ds-track-title\" type=\"button\">Track title</button><p class=\"ds-track-artist\">Local audio</p></div><div class=\"ds-track-actions\"><span class=\"ds-source\">FILE</span><button class=\"ds-track-icon\" type=\"button\" aria-label=\"Save track to favorites\" aria-pressed=\"false\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-track-icon\" type=\"button\" aria-label=\"Add track to queue\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></button><span class=\"ds-track-time\">0:00</span></div></article>",
+      "css": ".ds-track{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:13px;min-height:82px;padding:11px 10px;border-bottom:1px solid #353e32;color:var(--ink,#f2efe5);font-family:var(--sans,'DM Sans',sans-serif);line-height:1.6;transition:background .15s ease}.ds-track:hover{background:#252e23}.ds-track-current{background:#333f2b;border-radius:9px;border-bottom-color:transparent}.ds-track-current .ds-play-overlay{opacity:1}.ds-track-play{padding:0;background:none;position:relative;width:48px;height:48px;border:0;border-radius:7px;overflow:hidden;cursor:pointer}.ds-cover{position:relative;display:grid;place-items:center;width:48px;height:48px;background:#2e3a29;border:1px solid #687254;border-radius:6px;color:#d3dfba}.ds-play-overlay{position:absolute;inset:0;display:grid;place-items:center;background:rgba(12,20,11,.65);color:white;opacity:0;transition:opacity .15s ease}.ds-track:hover .ds-play-overlay,.ds-track-play:focus-visible .ds-play-overlay{opacity:1}.ds-track-copy{min-width:0}.ds-track-title{font-family:var(--serif,'Lora',Georgia,serif);font-size:15px;display:block;background:none;border:0;color:var(--ink,#f2efe5);padding:2px 0;text-align:left;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:1.6;cursor:pointer}.ds-track-title:hover{text-decoration:underline;text-underline-offset:3px}.ds-track-artist{font-size:12px;color:#bdc6b2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0}.ds-track-actions{display:flex;align-items:center;gap:3px}.ds-source{font-size:12px;color:#c0c9b5;padding:2px 5px;border:1px solid #55614b;border-radius:4px;margin-right:4px}.ds-track-icon{display:inline-grid;place-items:center;width:34px;height:38px;padding:0;border:0;border-radius:50%;background:transparent;color:#d9e1ce;cursor:pointer;transition:background .15s ease,color .15s ease}.ds-track-icon:hover{background:#37422f;color:#f3f6ed}.ds-track-icon[aria-pressed=true]{color:var(--accent,#c3d19e);background:#35402a}.ds-track-play:focus-visible,.ds-track-title:focus-visible,.ds-track-icon:focus-visible{outline:2px solid var(--accent,#c3d19e);outline-offset:5px;}.ds-track-time{font-size:12px;min-width:36px;text-align:right;font-variant-numeric:tabular-nums;color:#d8dfcf}@media(max-width:1050px){.ds-source{display:none}}@media(max-width:760px){.ds-track{min-height:80px;gap:11px}.ds-track-title{font-size:14px}}@media(max-width:420px){.ds-track{grid-template-columns:42px minmax(0,1fr) auto;gap:9px;padding:10px 5px}.ds-track-play,.ds-cover{width:42px;height:42px}.ds-track-title{font-size:13px}.ds-track-time{display:none}.ds-track-icon{width:30px}}@media(prefers-reduced-motion:reduce){.ds-track,.ds-play-overlay,.ds-track-icon{transition:none}}"
+    },
+    {
+      "name": "Compact Corner Vinyl Player",
+      "kind": "custom",
+      "refersTo": "player",
+      "description": "Bottom-right glass now-playing widget, width clamp(300px,26vw,380px). Library and queue appear above it on demand. The specimen represents the compact deck; runtime source is assets/css/home-player.css.",
+      "html": "<section class=\"ds-mini-player\" aria-label=\"Music player\"><div class=\"ds-record\" aria-hidden=\"true\"></div><div><strong>Choose something to listen to</strong><p>Your next little escape.</p><button type=\"button\">Play</button></div><input type=\"range\" aria-label=\"Seek in track\"><button type=\"button\" aria-expanded=\"false\">Library</button></section>",
+      "css": ".ds-mini-player{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 12px;width:clamp(300px,26vw,380px);padding:16px;box-sizing:border-box;background:rgba(15,25,19,.42);backdrop-filter:blur(14px) saturate(145%);color:#f2efe5;border:1px solid rgba(219,234,201,.32);border-radius:16px;font:13px var(--sans,\"DM Sans\",sans-serif)}.ds-record{width:64px;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 2px,rgba(194,209,181,.16) 2.5px,transparent 3px),#0b110d}.ds-mini-player strong{font-family:var(--serif,\"Lora\",serif)}.ds-mini-player p{font-size:12px;color:#c4ceba}.ds-mini-player input{grid-column:1/-1;width:100%;accent-color:#c3d19e}.ds-mini-player button{min-height:34px;background:#c3d19e;color:#202719;border:0;border-radius:7px}.ds-mini-player button:focus-visible,.ds-mini-player input:focus-visible{outline:2px solid #c3d19e;outline-offset:4px}@media(max-width:760px){.ds-mini-player{width:min(340px,calc(100vw - 24px))}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Night Desk",
+    "overview": "After Hours Home keeps the open room, biography and Discord/tools. A compact glass vinyl player occupies the bottom-right corner at around one quarter of desktop width. Library and queue open on demand above it; there is no separate Music tab.",
+    "keyCharacteristics": [
+      "Forest and charcoal surfaces with ivory text.",
+      "Muted olive for primary actions and selected controls.",
+      "Lora headings and track titles with DM Sans controls.",
+      "Personal Panda identity and a distinct live Discord presence.",
+      "Open Home, compact corner vinyl, collection available on demand."
+    ],
+    "rules": [
+      {
+        "name": "The Olive State Rule",
+        "body": "Use olive fill for the existing primary actions and selected controls. A current track uses a darker forest highlight, preserving the distinction between playback position and a filled action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Type Voices Rule",
+        "body": "Use Lora for the implemented names, headings and track titles; use DM Sans for controls, metadata and form labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Layers Rule",
+        "body": "Preserve the tonal and border hierarchy already used by the shell and library. Use the existing shadows for the profile, player and queue.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the shared forest, ivory and olive tokens for new controls and surfaces.",
+      "Do preserve Lora for headings and track titles, and DM Sans for controls and metadata.",
+      "Do keep the Panda as the main profile identity and the original photo within Discord.",
+      "Do preserve visible olive focus outlines and text labels for icon actions.",
+      "Do keep footer content reachable behind the compact dock.",
+      "Do show Library and queue on demand above the player."
+    ],
+    "donts": [
+      "Don't replace the established palette or type pairing with a separate visual system.",
+      "Don't style the current track as a filled primary action; keep its darker forest highlight.",
+      "Don't turn the vertical music library into a horizontal carousel.",
+      "Don't hide the meaning of presence or playback state behind color alone.",
+      "Don't replace Home with a permanent music workspace or full-width bottom bar."
+    ]
+  }
+}

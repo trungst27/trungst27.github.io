@@ -1,0 +1,9 @@
+# Local tools, screenshots and runtime state.
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/runtime/
+.impeccable/config.local.json
+.env
+.env.*
+!.env.example
